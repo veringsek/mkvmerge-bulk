@@ -19,5 +19,5 @@ Write-Output "Detect file name $filename"
 Write-Output "Output to $path"
 $script = $script.Replace($filename, '%%~nf')
 $script = "chcp 65001`r`nfor %%f in (*.mkv) do $script`r`npause"
-Write-Output $script | Out-File -FilePath $path -Encoding utf8
+Write-Output $script | Out-File -LiteralPath $path -Encoding utf8
 Write-Output "Complete"
